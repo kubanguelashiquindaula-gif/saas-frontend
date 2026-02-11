@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SaaS Angola</title>
+</head>
+<body>
+  <h1>SaaS Angola Online 🚀</h1>
+  <button onclick="testAPI()">Testar API</button>
+  <pre id="resultado"></pre>
+
+  <script>
+    async function testAPI() {
+      const res = await fetch("https://SEU-BACKEND.onrender.com/test-db");
+      const data = await res.json();
+      document.getElementById("resultado").innerText =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
